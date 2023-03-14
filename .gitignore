@@ -1,6 +1,5 @@
 /node_modules
 /.wwebjs_auth
-CONFIG.js
 .vscode/settings.json
 index.js
 dsf.txt
