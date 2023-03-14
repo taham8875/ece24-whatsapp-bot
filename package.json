@@ -1,8 +1,4 @@
 {
-  "engines": {
-    "node": "16.15.0",
-    "npm": "8.5.5"
-  },
   "dependencies": {
     "@adiwajshing/baileys": "^5.0.0",
     "@hapi/boom": "^10.0.1",
@@ -17,6 +13,7 @@
   "main": "telegram-bot.js",
   "devDependencies": {},
   "scripts": {
+    "build": "node install",
     "start": "node telegram-bot.js"
   },
   "repository": {

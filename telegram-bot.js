@@ -13,7 +13,7 @@ const {
 const util = require("util");
 // console.log("client", client);
 
-const number = TEST_ANNOUNCMENT_GROUP_ID;
+const number = COMMUNICATION_24_ANNOUNCMENT_GROUP_ID;
 
 const bot = new Telegraf(TELEGRAM_BOT_TOKEN);
 
