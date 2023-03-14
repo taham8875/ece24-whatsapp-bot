@@ -13,7 +13,6 @@
   "main": "telegram-bot.js",
   "devDependencies": {},
   "scripts": {
-    "build": "node install",
     "start": "node telegram-bot.js"
   },
   "repository": {
