@@ -1,11 +1,4 @@
 /node_modules
 /.wwebjs_auth
 .vscode/settings.json
-index.js
-dsf.txt
-Procfile
-telegram.js
-test.txt
-txt.js
-
-.space
+.env
