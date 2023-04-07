@@ -21,7 +21,7 @@ const { whatsappClient } = require("./whatsappClient");
 // start coding
 
 // Create a new telegram bot
-const bot = new Telegraf(process.env.TEST_BOT);
+const bot = new Telegraf(process.env.TELEGRAM_ECE24BOT_TOKEN);
 console.log("Bot has started...");
 
 let client = null;
@@ -43,6 +43,7 @@ bot.on("channel_post", async (ctx) => {
 
   // push the ctx object to the queue
   ctxQueue.push(ctx);
+  console.log("ctxQueue ->", ctxQueue);
   ctxCount++;
 
   // check if the message contains documents, if so, decrease ackCount by 1 because we don't want to destroy the client until the document and its caption is sent (we send the document and its caption as two separate messages)
@@ -52,7 +53,6 @@ bot.on("channel_post", async (ctx) => {
   if (!client) {
     // create a new client and send the messages in the queue
     client = whatsappClient(ctxQueue);
-
     // listen for the message ack event to know when the message is sent, if the same number of messages acknolwedged as the number of messages sent, then destroy the client
     client.on("message_ack", (msg, ack) => {
       /*
@@ -69,6 +69,7 @@ bot.on("channel_post", async (ctx) => {
         if (ackCount === ctxCount) {
           client.destroy();
           client = null;
+          ctxQueue = [];
         }
       }
     });

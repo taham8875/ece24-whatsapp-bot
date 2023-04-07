@@ -22,6 +22,8 @@ function whatsappClient(ctxQueue) {
 
   client.initialize();
 
+  console.log("CLIENT INITIALIZED ", client);
+
   client.on("qr", (qr) => {
     qrcode.generate(qr, { small: true });
   });
@@ -46,7 +48,7 @@ function whatsappClient(ctxQueue) {
 
       // if the message contains no images or documents send the message text
       if (!containesImages && !containesDocuments && !isVoice) {
-        let message = channelPost.text;
+        let message = ctx.update.channel_post.text;
         client.sendMessage(recipient, message);
       } else if (containesImages) {
         prepareImage(ctx)
