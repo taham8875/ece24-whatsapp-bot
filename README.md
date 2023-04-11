@@ -15,7 +15,7 @@ Hi there, this is my latest project, a Whatsapp bot that can be used to get forw
 
 I created a youtube video about it, find it here
 
-https://youtu.be/DONeYcEhh4Q
+https://youtu.be/A_XWg2kWcuQ
 
 ## Demo
 
