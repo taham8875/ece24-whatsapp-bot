@@ -11,6 +11,11 @@
 
 Hi there, this is my latest project, a Whatsapp bot that can be used to get forward messages from [ECE24 telegeram channel](https://t.me/comm24) (Electronics and Communications department, Faculty of engineering, Alexandria University, Class 24) to ECE24 whatsapp community, the goal is to automate the process of communicationg with the student on different platforms via one click. The bot is written in node.js and uses the [Telegraf](https://github.com/telegraf/telegraf) library to listen to the messages and send the to whatsapp with the [Whatsapp web js](https://github.com/pedroslopez/whatsapp-web.js) library. The bot is currently hosted on glitch and can be used by anyone with a Whatsapp account.
 
+## YouTube
+
+I created a youtube video about it, find it here
+
+https://youtu.be/DONeYcEhh4Q
 
 ## Demo
 
